@@ -30,4 +30,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCara"></Button>
 
+    <TextView
+        android:id="@+id/textContador"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:width="100dp"
+        android:height="20dp"
+
+        android:textColor="@color/white"
+        android:textSize="5dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
