@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val contadorText : TextView= findViewById(R.id.textContador)
         val dado1=Dice(6)
         var contador=0
+
         contadorText.textSize=30f
 
 
@@ -25,11 +26,13 @@ class MainActivity : AppCompatActivity() {
             contador++
             caraText.text = dado1.roll().toString()
             contadorText.text="NUMBER ROLL: ${contador.toString()}"
-            if (dado1.roll()>=4){
+            if(dado1.roll()>=4){
                 Toast.makeText(this, "great", Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this, "retry", Toast.LENGTH_SHORT).show()
             }
+
+            when()
         }
     }
 }
