@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             contador++
             valorRoll=dado1.roll()
 
-            contadorText.text="NUMBER ROLLs: ${contador.toString()}"
+            contadorText.text="NUMBER ROLLs: ${contador}"
 
             dado1.cambiarImagen(diceImage, valorRoll)
 
@@ -47,8 +47,6 @@ fun mostrarMensaje( sideDice:Int, winCondition: Int){
         3-> Toast.makeText(this,"LOSEE, ROLL DOWN", Toast.LENGTH_SHORT).show()
         4-> Toast.makeText(this,"LOSEE, ROLL DOWN", Toast.LENGTH_SHORT).show()
         5-> Toast.makeText(this,"LOSEE, ROLL DOWN", Toast.LENGTH_SHORT).show()
-
-
     }
 }
 }
@@ -57,7 +55,6 @@ class Dice(val sides:Int){
     fun roll():Int{ return(1..sides).random() }
 
     fun cambiarImagen(imagen: ImageView, sideDice: Int){
-
         when(sideDice){
             1->imagen.setImageResource(R.drawable.dice_1)
             2->imagen.setImageResource(R.drawable.dice_2)
